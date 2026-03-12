@@ -1,12 +1,15 @@
-DR14_QSO_NMF_zQSO_zmin_zmax_basis.fits
+
+SDSS DR14 based NMF Eigenspectra for Quasar Continuum Modeling
 --------------------------------------
 
-This FITS file contains eigenspectra basis vectors and rest-frame wavelengths for a subset of quasars from the SDSS DR14 catalog. The data are generated using a Non-negative Matrix Factorization (NMF) method applied to quasars in following redshift (zqso) ranges:
+This directory contains eigenspectra basis vectors and rest-frame wavelengths that can be used to build continuum of SDSS quasars. The data are generated using a Non-negative Matrix Factorization (NMF) method applied to SDSS DR14 spectra in the following redshift ranges:
 
-    1) 0 < z < 1
-    2) 0.4 < z < 1.8
-    3) 0.8 < z < 2.8
-    4) 2 < z < 4.8
+    1) 0 < z < 1.0
+    2) 0.40 < z < 1.80
+    3) 0.80 < z < 2.80
+    4) 2.0 < z < 4.80
+
+Each file is named by their redshift range: `SDSS_DR14_z_zmin_zmax_eigenspectra.fits`
 
 ## File Structure
 
@@ -15,13 +18,19 @@ The file is composed of three HDUs:
 ### HDU 0 — Primary Header
 Contains metadata about the file and the fitting process.
 
-| Keyword | Value       | Description                               |
-|---------|-------------|-------------------------------------------|
-| AUTHOR  | A.Anand     | Data author                               |
-| QSOVAC  | SDSS DR14   | Source QSO catalog                        |
-| EIGFIT  | NMF         | Fitting method used (Zhu NMF)             |
-| ZMIN    | zmin         | Minimum redshift of quasars in this file  |
-| ZMAX    | zmax        | Maximum redshift of quasars in this file  |
+| Keyword   | Description                               |
+|-----------|-------------------------------------------|
+| METHOD    | Eigenspectra construction method used (NMF)             |
+| ZMIN      | Minimum redshift of QSOs used for NMF construction |
+| ZMAX      | Maximum redshift of QSOs used for NMF construction  |
+| LAMSTART  | Starting wavelength (Ang) for normalization    |
+| LAMEND    | Ending wavelength (Ang) for normalization      |
+| NCOMP     | Number of NMF basis components                  |
+| MAXIT     | Maximum number of iterations during fit   |
+| NORMSTAT  | Statistic used for normalization |
+| AUTHOR    | Data author                               |
+| QSOVAC    | Survey name and Data Release  |
+| EIGFIT    | Eigenspectra fit method: NMF    
 
 ### HDU 1 — EIGENVEC
 
@@ -37,5 +46,4 @@ Contains metadata about the file and the fitting process.
 
 ## Description
 
-This basis file provides a compact representation of quasar spectra using NMF. It is intended for spectral modeling, analysis of spectral diversity, or further dimensionality reduction tasks.
-
+This basis file provides a compact representation of SDSS quasar spectra using NMF. It is intended for continuum modeling, analysis of spectral diversity, or further dimensionality reduction tasks.
