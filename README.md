@@ -1,8 +1,7 @@
 # Nonnegative Matrix Factorization (NMF) based Eigenspectra for Quasar Continuum Modeling
 
 This repository collects non-negative matrix factorization (NMF) eigenspectra that
-are designed to model and reconstruct quasar continua in large  spectroscopic surveys.  Each set of eigenspectra covers a range of redshifts and wavelengths appropriate for a particular survey; by linearly combining a small number of components one can generate realistic continua for use in fitting,
-mock-generation, or dimensionality‑reduction studies.
+are designed to model and reconstruct quasar continua in large  spectroscopic surveys.  Each set of eigenspectra covers a range of redshifts and wavelengths appropriate for a particular survey; by linearly combining a small number of components one can generate realistic continua for use in fitting, mock-generation, or dimensionality‑reduction studies.
 
 ### Scientific background
 The basic technique follows Zhu (2016) and the more recent applications in
@@ -81,6 +80,10 @@ Users should inspect the header of each file to confirm the redshift range and
 other metadata.
 
 ---
+
+## Compatibility
+
+These eigenspectra can be directly be used with [nmfqsofit](https://github.com/abhi0395/nmfqsofit) to reconstruct the continua for both DESI and SDSS quasars. Detailed implementation steps can be found in the documentation of [nmfqsofit](https://github.com/abhi0395/nmfqsofit).
 
 ## Future directions
 
