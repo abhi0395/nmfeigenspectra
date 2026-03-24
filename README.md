@@ -10,7 +10,7 @@ details on the NMF algorithm, preprocessing steps, and quality checks.
 
 - **[Zhu (2016)](https://arxiv.org/abs/1612.06037)** — original vectorized NMF implementation for astronomical spectra
 - **[Anand et al. (2021)](https://arxiv.org/abs/2103.15842)** — application to SDSS DR14 quasars
-- **[Anand et al. (2025)](https://arxiv.org/abs/2504.20299)** — extended analysis and DESI compatibility
+- **[Anand et al. (in prep)](https://github.com/abhi0395/nmfeigenspectra/)** — extended analysis and DESI compatibility
 
 > Please cite these papers when using these data if you make use of these eigenspectra basis vectors in your research.
 
